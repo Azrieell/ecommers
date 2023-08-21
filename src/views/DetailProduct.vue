@@ -1,12 +1,12 @@
 <template>
   <!-- component -->
-<section class="text-gray-700 body-font overflow-hidden bg-white">
+<section class="text-gray-700 body-font overflow-hidden bg-white" v-if="">
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
       <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="https://www.whitmorerarebooks.com/pictures/medium/2465.jpg">
       <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
         <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
-        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">The Catcher in the Rye</h1>
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{  }}</h1>
         <div class="flex mb-4">
           <span class="flex items-center">
             <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
@@ -91,11 +91,5 @@
     props:[
       'slug'
     ],
-    mounted() {
-      this.$store.dispatch("product/fetchProductsid", this.slug)
-    },
-    computed: {
-      ...mapState('dataProducts', ['getid']),
-    },
   }
 </script>
